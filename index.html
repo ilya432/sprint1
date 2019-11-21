@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Minesweeper</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body onload="initGame()">
+<body > 
     <div>
-
-    </div>
+        <button class="lvlBtn" onclick="changeLevel('easy')">Easy</button>
+        <button class="lvlBtn" onclick="changeLevel('hard')">Hard</button>
+        <button class="lvlBtn" onclick="changeLevel('expert')">Expert</button>
+    </div>  
 
     <div class="gameContainer">
+        <div class="top">
+            <div id="tHeaderDivFlags" class="tHDiv"><span class="flagsSpan"></span></div>
+            <div id="smileyImgDIV" class="tHDiv">
+                <img class="smileyImg" src="./img/start.png" onclick="RestartGame()" alt="Smiley">
+            </div>
+            <div id="tHeaderDivTimer" class="tHDiv"><span class="timerSpan"></span></div>
+        </div>
+
         <table class="gameTable">
             <thead class="tableHead">
-                    <img class="smileyImg" src="./img/start.png" onclick="RestartGame()" alt="Smiley">
+                
             </thead>
             <tbody class="tableBody">
 
             </tbody>
         </table>
     </div>
-
-
-
-
     <script src="./js/flags.js"></script>
     <script src="./js/mines.js"></script>
     <script src="./js/utils.js"></script>

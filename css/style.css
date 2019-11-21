@@ -1,13 +1,15 @@
-html, body{width:100%; height:100%; text-align: center;}
+html, body{width:100%; height:100%; text-align: center; overflow: hidden;}
 
-.gameContainer{left:40%; position: absolute; background-color: lightgoldenrodyellow;}
-/* .gameTable{} */
-.tableHead{height:30px; width:330px; background-color: lightsteelblue;}
-/* .tableBody{} */
-.smileyImg{height:30px; width:30px;}
-.cell{width:50px; height:50px; border: 1px solid black;}
-.cellImg{width:50px; height:50px;}
-/* .mine{ background-image: url("./img/mine.png");}
-.flag{ background-image: url("./img/flag.png");} */
+.gameContainer{margin: 0 35% 0 35%; position:absolute; background-color: lightgoldenrodyellow;}
+/* position: absolute; */
 
+.top{height:50px; width:inherit; margin: 5px; }
+.tHDiv{ height:inherit; width:100px; background-color: black; color: red; font-size: 30px;}
+#tHeaderDivFlags{ float: left; }
+#smileyImgDIV{float: left; margin:0 0 0 45px; background-color: lightgoldenrodyellow;}
+#tHeaderDivTimer{ float: right;} 
+.smileyImg{height:30px; width:30px; margin: 10px 0 0 0;}
+.cell{width:30px; height:30px; border: 1px solid black;}
+.cellImg{width:30px; height:30px; top:2px}
+.tdSpan{font-size: 20px;}
 .hidden { display: none; }
