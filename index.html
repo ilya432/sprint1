@@ -8,29 +8,33 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body > 
-    <div>
-        <button class="lvlBtn" onclick="changeLevel('easy')">Easy</button>
-        <button class="lvlBtn" onclick="changeLevel('hard')">Hard</button>
-        <button class="lvlBtn" onclick="changeLevel('expert')">Expert</button>
+    <div class="levelsDiv">
+        <button class="lvlBtn" onclick="restartGame('easy')">Easy</button>
+        <button class="lvlBtn" onclick="restartGame('hard')">Hard</button>
+        <button class="lvlBtn" onclick="restartGame('expert')">Expert</button>
     </div>  
 
     <div class="gameContainer">
         <div class="top">
-            <div id="tHeaderDivFlags" class="tHDiv"><span class="flagsSpan"></span></div>
-            <div id="smileyImgDIV" class="tHDiv">
-                <img class="smileyImg" src="./img/start.png" onclick="RestartGame()" alt="Smiley">
-            </div>
-            <div id="tHeaderDivTimer" class="tHDiv"><span class="timerSpan"></span></div>
+                    <div id="left" class="topDiv"><span class="flagsSpan"></span></div>
+                    <div id="center" class="topDiv">
+                        <img class="smileyImg" src="./img/start.png" onclick="restartGame(gLevel)" alt="Smiley">
+                    </div>
+                    <div id="right" class="topDiv"><span class="timerSpan"></span></div>
         </div>
-
-        <table class="gameTable">
-            <thead class="tableHead">
-                
-            </thead>
-            <tbody class="tableBody">
-
-            </tbody>
-        </table>
+        <div id="tblDiv">
+            <table class="gameTable">
+                <thead class="tableHead">                    
+                </thead>
+                <tbody class="tableBody">    
+                </tbody>
+            </table>
+        </div> 
+    </div>
+    <div class="victoryPop hidden">
+        <span class="victorySpan">Victory!</span>
+        <img class="victoryImg" src="./img/victory.png" alt="Victory">
+        <button class="victoryBtn" onclick="restartGame('easy')">Play again</button>
     </div>
     <script src="./js/flags.js"></script>
     <script src="./js/mines.js"></script>
